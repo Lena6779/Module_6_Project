@@ -1,0 +1,9 @@
+streamlit
+requests
+pandas
+plotly
+fastapi
+uvicorn
+PyJWT
+python-multipart
+openai

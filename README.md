@@ -2,20 +2,28 @@
 
 An interactive AI API Dashboard with Authentication. Built with a FastAPI backend and a Streamlit frontend, featuring JWT login, a task dashboard with Plotly charts, task management, and an AI-generated task summary.
 
-## Features
+## Features in Application
 
 - **Authentication:** Login form with JWT tokens stored in session state, logged-in user shown in the sidebar, and a logout button that clears the session
+
 - **Dashboard:** Metric cards, Plotly charts (tasks by status and by priority), and a table of tasks from the API
+
 - **Task management:** Add new tasks, mark tasks complete, and delete tasks
+
 - **AI summary:** Sends the current task list to OpenAI for a summary and suggested next step (falls back to a mock summary if no API key is set)
+
 - **Error handling:** Clear messages for connection errors and expired sessions (401s), with sample data shown when the API is offline
+
 - **Layout:** Sidebar controls with a priority filter, three tabs, and loading spinners
 
 ## Tech Stack
 
 - **Backend:** FastAPI, PyJWT, Uvicorn
+
 - **Frontend:** Streamlit, Plotly, pandas
+
 - **API calls:** requests (centralized in `api_client.py`)
+
 - **AI:** OpenAI API (optional)
 
 ## Project Structure
@@ -81,7 +89,9 @@ The dashboard opens at http://localhost:8501. API docs are available at http://1
 ## Notes
 
 - Tasks are stored in memory, so they reset to the sample data whenever the backend restarts! 
+
 - Demo users and the JWT secret key are hard-coded for this assignment. 
+
 - In a real-world app, passwords would be hashed and stored in a database, and the secret key would be kept out of the code (for example, in an environment variable) so it isn't exposed on GitHub.
   
 ## Author
